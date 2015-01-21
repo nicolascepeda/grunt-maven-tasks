@@ -266,11 +266,11 @@ module.exports = function(grunt) {
         grunt.util.spawn({ cmd: 'git', args: ['tag', '-d', version] }, function(err, result, code) {
           if (err) {
             grunt.verbose.or.write(msg);
-            grunt.log.error().error('Failed to delete tag ' + ('v' + version).cyan);
+            grunt.log.error().error('Failed to delete tag ' + (version).cyan);
           }
 
           grunt.verbose.ok();
-          grunt.log.writeln('Deleted tag ' + ('v' + version).cyan);
+          grunt.log.writeln('Deleted tag ' + (version).cyan);
 
           done(err);
         });

@@ -261,7 +261,7 @@ module.exports = function(grunt) {
 
       isGitRepo(function(isGit) {
         if (!isGit) { return done(); }
-        msg = 'Deleting tag v' + version.cyan + '...';
+        msg = 'Deleting tag' + version.cyan + '...';
         grunt.verbose.write(msg);
         grunt.util.spawn({ cmd: 'git', args: ['tag', '-d', version] }, function(err, result, code) {
           if (err) {

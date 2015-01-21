@@ -263,7 +263,7 @@ module.exports = function(grunt) {
         if (!isGit) { return done(); }
         msg = 'Deleting tag v' + version.cyan + '...';
         grunt.verbose.write(msg);
-        grunt.util.spawn({ cmd: 'git', args: ['tag', '-d', 'v' + version] }, function(err, result, code) {
+        grunt.util.spawn({ cmd: 'git', args: ['tag', '-d', version] }, function(err, result, code) {
           if (err) {
             grunt.verbose.or.write(msg);
             grunt.log.error().error('Failed to delete tag ' + ('v' + version).cyan);
